@@ -1,0 +1,24 @@
+1- Three additional functions were created to enhance the functionality of the application:
+
+int checkPatientNum(struct Appointment* tempAppoint, struct Patient* patient, int maxPatient): 
+This function validates the patient number entered by the user for an appointment. It ensures the patient number exists in the patient list, preventing appointments for non-existent patients and ensuring data integrity. If the patient number is found, it returns 0; otherwise, it returns 1, indicating an error.
+
+int checkSpot(struct Appointment* temp, struct Appointment* appoint, int maxAppointments): 
+This function checks if there is an available appointment slot at a given date and time. It prevents double-booking by comparing the date and time of the new appointment with existing appointments. If the time slot is available, it returns the index of the first available slot, helping in finding the earliest opening.
+
+void getTime(struct Time* time): 
+This function allows the user to input the time for a new appointment in a user-friendly manner. It validates the input, ensuring it falls within the acceptable time range and intervals. The user is prompted to re-enter the time if it's invalid, ensuring accurate and consistent time inputs.
+
+Together, these functions contribute significantly to the application's reliability and user experience. They prevent invalid inputs, double-booking of appointments, and ensure that appointments are made for existing patients. By finding the first available slot, they optimize the scheduling process. Additionally, the time input function guarantees that all appointments adhere to the specified time constraints, leading to more accurate and consistent data. Overall, these functions improve the application's efficiency and data integrity, making it a more user-friendly and robust tool for managing appointments and patient records.
+
+2- 
+The minimized use of the scanf function in the client.c source code file was intentionally done to improve the application's reliability and security. scanf can be error-prone when handling user input, leading to unexpected behavior or vulnerabilities like buffer overflows. By using custom input functions, such as inputIntPositive, the application can enforce proper input validation and error handling more effectively. This approach enhances the application's robustness and user-friendliness. Moreover, centralizing input processing in custom functions improves code maintainability and readability, making it easier to modify or extend in the future. Overall, reducing scanf calls in the code is a deliberate design choice to ensure a more stable, secure, and maintainable application.
+
+3- 
+I placed all three functions in the module named "utility functions" due to several factors and considerations. One of the primary reasons was code organization and maintainability. Grouping related functions together in a separate module makes it easier to locate and manage them during development and maintenance. This modular approach enhances code readability and reduces the chances of errors caused by scattered or disorganized code.
+
+By placing these functions in a specific module, I aimed to promote code reusability. Utility functions often serve general purposes and can be useful in various parts of the application. Placing them in a central module makes it convenient for other parts of the program to access and utilize these functions without duplicating code. This encourages the DRY (Don't Repeat Yourself) principle, leading to a more efficient and concise codebase.
+
+Additionally, the concept of encapsulation and separation of concerns played a significant role in this decision. Keeping utility functions isolated in their module ensures that they have clear boundaries and are decoupled from other specific components. This reduces the risk of unintended side effects and enhances code maintainability, making it easier to modify or update the utility functions without affecting other parts of the application.
+
+The name "utility functions" itself accurately describes the purpose of this module, acting as a repository for general-purpose functions. This descriptive name fosters better communication among developers, making it evident where to look for and how to use these functions in the application. Overall, placing the functions in the "utility functions" module optimizes code organization, promotes reusability, and facilitates code maintenance for a more efficient and robust software development process.

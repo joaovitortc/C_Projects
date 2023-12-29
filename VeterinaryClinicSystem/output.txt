@@ -1,0 +1,17 @@
+Script started on Mon 07 Aug 2023 08:57:45 PM EDT
+Imported 20 patient records...
+Imported 15 appointment records...
+
+Veterinary Clinic System
+=========================
+1) PATIENT     Management
+2) APPOINTMENT Management
+-------------------------
+0) Exit System
+-------------------------
+Selection: 
+
+^Z^Z^Z^X^X^[
+Error! Input a whole number: 
+^C
+Script done on Mon 07 Aug 2023 08:57:53 PM EDT
